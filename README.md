@@ -15,6 +15,10 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
+# Snapshot Block Calculator
+
+This program is to allow EnergyWeb to fairly select blocks at which staking-snapshots will be taken.
+
 ## Build
 
 `cargo build`
