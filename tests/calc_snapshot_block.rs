@@ -9,7 +9,7 @@ mod calc_snapshot_block {
       let end_block:u32 = 18200000; // https://explorer.energyweb.org/block/18200000/transactions
       let block_hash = "0xfdd6d56dc922bf093cd69abb72f4b1d33d1a4a9cd7978a04c59f97ad0345bada"; // https://explorer.energyweb.org/block/18778013/transactions
       let output = calc_snapshot_block(start_block, end_block, block_hash);
-      assert_eq!(output, 18039370);
+      assert_eq!(output, 18127081);
       assert!(output > start_block);
       assert!(output < end_block);
     }
