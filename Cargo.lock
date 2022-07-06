@@ -80,7 +80,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "snapshot-block-calculator"
+name = "snapshot_block_calculator"
 version = "0.1.0"
 dependencies = [
  "rand",
