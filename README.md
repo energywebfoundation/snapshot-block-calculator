@@ -17,7 +17,13 @@
 
 # Snapshot Block Calculator
 
-This program is to allow EnergyWeb to fairly select blocks at which staking-snapshots will be taken.
+This program is to allow EnergyWeb to fairly select blocks at which staking snapshots will be taken.
+
+EnergyWeb's approach for selection of the snapshot block is as follows:
+1. Select a blocknumber range (start and end blocknumbers) from which a snapshot block is to be calculated
+1. Obtain the blockhash of a block to use as a seed value.
+   If EnergyWeb commits to use the blockhash of a future block, this is a source of randomness which is difficult enough to influence or predict.
+1. Calculate a blocknumber within the random using this [program](./src/lib.rs)
 
 ## Build
 
