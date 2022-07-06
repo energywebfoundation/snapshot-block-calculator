@@ -24,6 +24,31 @@ mod calc_snapshot_block {
       assert_eq!(output_1, output_2);
     }
 
+    /// This test demonstrates that output is on the same proportional point on a range (given the same seed).
+    /// This is demonstrated by using start&end sets which are the same size but an increment apart
+    #[test]
+    fn test_result_is_independant_of_incremented_range() {
+      let start_block: u32 = 0;
+      let end_block:u32 = 100;
+      let range_increment: u32 = 100;
+      let block_hash = "0xfdd6d56dc922bf093cd69abb72f4b1d33d1a4a9cd7978a04c59f97ad0345bada"; // https://explorer.energyweb.org/block/18778013/transactions
+      let output_1 = calc_snapshot_block(start_block, end_block, block_hash);
+      let output_2 = calc_snapshot_block(start_block+range_increment, end_block+range_increment, block_hash);
+      assert_eq!(output_1+range_increment, output_2);
+    }
+
+    /// This test demonstrates that output is on the same proportional point on a range (given the same seed).
+    /// This is demonstrated by using start&end sets which are proportional in size and showing that result is proportional
+    #[test]
+    fn test_result_is_independant_of_range_2() {
+      let start_block: u32 = 0;
+      let end_block:u32 = 100;
+      let range_multiple: u32 = 2;
+      let block_hash = "seed string 3"; 
+      let output_1 = calc_snapshot_block(start_block, end_block, block_hash);
+      let output_2 = calc_snapshot_block(start_block*range_multiple, end_block*range_multiple, block_hash);
+      assert_eq!(output_1*range_multiple, output_2);
+    }
 
     #[test]
     fn test_can_generate_different_outputs() {
