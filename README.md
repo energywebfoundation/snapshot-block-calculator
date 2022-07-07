@@ -22,8 +22,12 @@ This program is to allow EnergyWeb to fairly select blocks at which staking snap
 EnergyWeb's approach for selection of the snapshot block is as follows:
 1. Select a blocknumber range (start and end blocknumbers) from which a snapshot block is to be calculated
 1. Obtain the blockhash of a block to use as a seed value.
-   If EnergyWeb commits to use the blockhash of a future block, this is a source of randomness which is difficult enough to influence or predict.
+   If EnergyWeb commits to use the blockhash of a future block using [SnapshotSeedRegistration contract](https://explorer.energyweb.org/address/0x4A0F475c59c9453B29c66548DB86f6557a75F448/transactions)
 1. Calculate a blocknumber within the random using this [program](./src/lib.rs)
+
+## Calculated Snapshot Blocks
+
+- Snapshot 1: [18059849](https://explorer.energyweb.org/block/18059849/transactions)
 
 ## Build
 
