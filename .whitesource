@@ -3,7 +3,7 @@
     "configMode": "AUTO",
     "configExternalURL": "",
     "projectToken": "",
-    "baseBranches": []
+    "baseBranches": ["whitesource/configure"]
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
