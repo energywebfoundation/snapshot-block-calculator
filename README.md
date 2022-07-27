@@ -28,6 +28,7 @@ EnergyWeb's approach for selection of the snapshot block is as follows:
 ## Calculated Snapshot Blocks
 
 - Snapshot 1: [18059849](https://explorer.energyweb.org/block/18059849/transactions)
+- Snapshot 2: [18648235](https://explorer.energyweb.org/block/18648235/transactions)
 
 ## Build
 
