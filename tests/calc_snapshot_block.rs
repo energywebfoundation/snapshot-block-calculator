@@ -94,4 +94,15 @@ mod calc_snapshot_block {
       assert!(output < end_block);
     }
 
+    #[test]
+    fn test_consortia_snapshot4() {
+      let start_block: u32 = 19742311; // https://explorer.energyweb.org/block/19742311/transactions
+      let end_block:u32 = 20427965; // https://explorer.energyweb.org/block/20427965/transactions
+      let block_hash = "0xa63aee496c3e6ea55c02b64bed4683059c9476a3968dca06c00a06a8b35e3293"; // https://explorer.energyweb.org/block/20557319/transactions
+      let output = calc_snapshot_block(start_block, end_block, block_hash);
+      assert_eq!(output, 20145052); // https://explorer.energyweb.org/block/20145052/transactions
+      assert!(output > start_block);
+      assert!(output < end_block);
+    }
+
 }
